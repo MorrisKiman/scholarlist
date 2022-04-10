@@ -6,8 +6,14 @@
         <meta name ="view-port" content="width = device-width, initial scale = 1">
         <script src = ""></script>
     </head>
+	<style>
+       table td {
+        word-wrap: break-word;
+      }
+    </style>
     
     <body>
+		<hr>
         <?php require_once 'process.php'?>
 		<!--the form that is going to be taking all the data-->
         <div class = "row justify-content-center">
@@ -17,6 +23,7 @@
                     <input type = "text" class="form-control"
                         name = "url" value = "<?php echo $url ?>" placeholder = "Enter new url">
                     <button type = "submit" class = "btn btn-primary" name = "save">Save</button>
+					<a href = "zote.php?>" class="btn btn-danger">Visit Viewed</a>
                 </div>
             </form>
         </div>
@@ -60,7 +67,7 @@
                         while ($row = $result -> fetch_assoc()):
                    ?>
                    <tr>
-                        <td><?php echo $row['link_url']; ?></td>
+                        <td style="width:10%"><?php echo $row['link_url']; ?></td>
                         <td><?php echo $row['status']; ?></td>
                         <td>
                             <!--Edit and delete record. First, Edit-->

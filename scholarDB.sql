@@ -5,7 +5,7 @@ use scholar;
 create table links(
 	id int(12) not null primary key auto_increment,
 	link_url varchar(1000) not null,
-	status int(1) not null,
+	status varchar(10) not null,
 	comments varchar(2000)
 
 );
