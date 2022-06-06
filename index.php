@@ -43,9 +43,9 @@
         <?php endif;?>
         <div class="container"> 
         <?php
-            $mysqli = new mysqli("localhost", "root", "morris", "scholar") or die(mysqli_error($mysqli));
+            $mysqli = new mysqli("localhost", "root", "WaterSprayer", "scholar") or die(mysqli_error($mysqli));
             
-            $result = $mysqli -> query("SELECT * from links where status='NO'") or die($mysqli->error);
+            $result = $mysqli -> query("SELECT * from links where status='GMAT'") or die($mysqli->error);
             
             //print out what is in the database
             //pre_r($result);

@@ -7,7 +7,7 @@
     $status = "";
 	$comments="";
     $update = false;
-    $mysqli = new mysqli("localhost", "root", "morris", "scholar") or die(mysqli_error($mysqli));
+    $mysqli = new mysqli("localhost", "root", "WaterSprayer", "scholar") or die(mysqli_error($mysqli));
     
     if(isset($_POST['save'])){
         $url = $_POST['url'];
